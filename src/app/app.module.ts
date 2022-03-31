@@ -37,6 +37,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LightboxModule } from 'ngx-lightbox';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -80,7 +82,8 @@ import { LightboxModule } from 'ngx-lightbox';
     RecaptchaModule,
     ReactiveFormsModule,
     FormsModule,
-    LightboxModule
+    LightboxModule,
+    HttpClientModule
     
   ],
   providers: [

@@ -25,9 +25,9 @@
                                         </div>
 
                                         <label for="date" class="form-label">Fecha de Nacimiento</label>
-                                        <input formControlName="birthday" type="date" class="form-control" name="date">
-                                        <div *ngIf="myForm.get('birthday').errors && myForm.get('birthday').dirty || myForm.get('birthday').touched">
-                                            <p class="text-danger" *ngIf="myForm.get('birthday').hasError('required')">
+                                        <input formControlName="date_of_birth" type="date" class="form-control" name="date">
+                                        <div *ngIf="myForm.get('date_of_birth').errors && myForm.get('date_of_birth').dirty || myForm.get('date_of_birth').touched">
+                                            <p class="text-danger" *ngIf="myForm.get('date_of_birth').hasError('required')">
                                                 La fecha de nacimiento es obligatorio
                                             </p>
                                         </div>
@@ -64,9 +64,9 @@
 
                                       <div class="col">
                                         <label for="text" class="form-label">Apellido Paterno</label>
-                                        <input formControlName="lastName" type="text" class="form-control" name="text">
-                                        <div *ngIf="myForm.get('lastName').errors && myForm.get('lastName').dirty || myForm.get('lastName').touched">
-                                            <p class="text-danger" *ngIf="myForm.get('lastName').hasError('required')">
+                                        <input formControlName="lastname" type="text" class="form-control" name="text">
+                                        <div *ngIf="myForm.get('lastname').errors && myForm.get('lastname').dirty || myForm.get('lastname').touched">
+                                            <p class="text-danger" *ngIf="myForm.get('lastname').hasError('required')">
                                                 El apellido paterno es obligatorio
                                             </p>
                                         </div>
@@ -80,9 +80,9 @@
                                         </div>
 
                                         <label for="number" class="form-label">Movil</label>
-                                        <input formControlName="phone" type="number" class="form-control" name="number">
-                                        <div *ngIf="myForm.get('phone').errors && myForm.get('phone').dirty || myForm.get('phone').touched">
-                                            <p class="text-danger" *ngIf="myForm.get('phone').hasError('required')">
+                                        <input formControlName="mobile" type="number" class="form-control" name="number">
+                                        <div *ngIf="myForm.get('mobile').errors && myForm.get('mobile').dirty || myForm.get('mobile').touched">
+                                            <p class="text-danger" *ngIf="myForm.get('mobile').hasError('required')">
                                                 El movil es obligatorio
                                             </p>
                                         </div>
@@ -110,9 +110,9 @@
 
                                       <div class="col">
                                         <label for="text" class="form-label">Apellido Materno</label>
-                                        <input formControlName="lastNameOne" type="text" class="form-control" name="text">
-                                        <div *ngIf="myForm.get('lastNameOne').errors && myForm.get('lastNameOne').dirty || myForm.get('lastNameOne').touched">
-                                            <p class="text-danger" *ngIf="myForm.get('lastNameOne').hasError('required')">
+                                        <input formControlName="second_lastname" type="text" class="form-control" name="text">
+                                        <div *ngIf="myForm.get('second_lastname').errors && myForm.get('second_lastname').dirty || myForm.get('second_lastname').touched">
+                                            <p class="text-danger" *ngIf="myForm.get('second_lastname').hasError('required')">
                                                 El apellido materno es obligatorio
                                             </p>
                                         </div>

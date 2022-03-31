@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -16,21 +17,22 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public fb: FormBuilder
+    public fb: FormBuilder,
+    private auth: AuthService
   ) {
     this.captcha= '';
     this.email= 'Secrect@email.com';
 
     this.myForm = this.fb.group({
       name: ['', [Validators.required]],
-      birthday: ['', [Validators.required]],
+      date_of_birth: ['', [Validators.required]],
       email: ['', [Validators.required]],
       password: ['', [Validators.required]],
-      lastName: ['', [Validators.required]],
+      lastname: ['', [Validators.required]],
       nationality: ['', [Validators.required]],
-      phone: ['', [Validators.required]],
+      mobile: ['', [Validators.required]],
       passwordCheck: ['', [Validators.required]],
-      lastNameOne: ['', [Validators.required]],
+      second_lastname: ['', [Validators.required]],
     });
   }
 
@@ -48,7 +50,14 @@ export class RegisterComponent implements OnInit {
   }
 
   saveData() {
-
-    console.log(this.myForm.value);
+    this.auth.register(this.myForm.value).subscribe(
+      resp => {
+        console.log(resp);
+        
+      }, error => {
+        console.log(error);
+        
+      }
+    )
   }
 }
