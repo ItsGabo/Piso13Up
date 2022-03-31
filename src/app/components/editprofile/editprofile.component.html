@@ -1,0 +1,117 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+        <div class="container w-75 bg mt-5 rounded shadow">
+            <div class="row align-items-stretch">
+                <div class=""></div>
+                <div class="p-5 rounded-end">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="row" id="map_section">
+                                <div class="col-20">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h1>EDITAR PERFIL</h1>
+                                                <label for="text" class="form-label">Nombre</label>
+                                                <input formControlName="name" type="text" class="form-control" name="text">
+                                                <div *ngIf="myForm.get('name').errors && myForm.get('name').dirty || myForm.get('name').touched">
+                                                    <p class="text-danger" *ngIf="myForm.get('name').hasError('required')">
+                                                        Este campo es obligatorio
+                                                    </p>
+                                                </div>
+                                                <div class="container"> <br>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label  for="text" class="form-label">Apellido Paterno</label>
+                                                            <input formControlName="lastName" type="text" class="form-control" name="text">
+                                                            <div *ngIf="myForm.get('lastName').errors && myForm.get('lastName').dirty || myForm.get('lastName').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('lastName').hasError('required')">
+                                                                    El apellido paterno es obligatorio
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="text" class="form-label">Apellido Materno</label>
+                                                            <input formControlName="lastNameOne" type="text" class="form-control" name="text">
+                                                            <div *ngIf="myForm.get('lastNameOne').errors && myForm.get('lastNameOne').dirty || myForm.get('lastNameOne').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('lastNameOne').hasError('required')">
+                                                                    El apellido materno es obligatorio
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container"> <br>
+                                                            <div class="row">
+                                                                <div class="col"> 
+                                                                    <label for="text" class="form-label">Movil</label>
+                                                                    <input formControlName="phone" type="text" class="form-control" name="text">
+                                                                    <div *ngIf="myForm.get('phone').errors && myForm.get('phone').dirty || myForm.get('phone').touched">
+                                                                        <p class="text-danger" *ngIf="myForm.get('phone').hasError('required')">
+                                                                            Este campo es obligatorio
+                                                                        </p>
+                                                                    </div>
+                                                                    <br>
+                                                                    <button type="button" class="btn btn-outline-primary">Actualizar</button>  
+                                                                </div> 
+                                                                <h1>CAMBIAR CONTRASEÑA</h1>
+                                                                <form>
+                                                                    <div class="row mb-3">
+                                                                      <label for="inputEmail3" class="col-sm-2 col-form-label">Nueva contraseña</label>
+                                                                      <div class="col-sm-10">
+                                                                        <input formControlName="newPassword" type="password" class="form-control" id="inputEmail3">
+                                                                        <div *ngIf="myForm.get('newPassword').errors && myForm.get('newPassword').dirty || myForm.get('newPassword').touched">
+                                                                            <p class="text-danger" *ngIf="myForm.get('newPassword').hasError('required')">
+                                                                                Este campo es obligatorio
+                                                                            </p>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="row mb-3">
+                                                                      <label for="inputPassword3" class="col-sm-2 col-form-label">Confirmar contraseña</label>
+                                                                      <div class="col-sm-10">
+                                                                        <input formControlName="confirmPassword" type="password" class="form-control" id="inputPassword3">
+                                                                        <div *ngIf="myForm.get('confirmPassword').errors && myForm.get('confirmPassword').dirty || myForm.get('confirmPassword').touched">
+                                                                            <p class="text-danger" *ngIf="myForm.get('confirmPassword').hasError('required')">
+                                                                                Este campo es obligatorio
+                                                                            </p>
+                                                                        </div>
+                                                                        
+                                                                      </div>
+                                                                    </div>
+                                                                </form>
+                                                                <p>Ingresa tu contraseña actual para validar los cambios</p>
+                                                                <div class="row mb-3">
+                                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Contraseña</label>
+                                                                    <div class="col-sm-10">
+                                                                      <input formControlName="password" type="email" class="form-control" id="inputEmail3">
+                                                                      <div *ngIf="myForm.get('password').errors && myForm.get('password').dirty || myForm.get('password').touched">
+                                                                        <p class="text-danger" *ngIf="myForm.get('password').hasError('required')">
+                                                                            Este campo es obligatorio
+                                                                        </p>
+                                                                    </div>
+                                                                    </div>
+                                                                  </div>
+                                                                  <h2>Doble factor de autentificación</h2>
+                                                                  <h6>Con este metodo tendras una capa extra de seguridad por medio de un codigo que te enviaremos</h6>
+                                                                  <h6>por correo electronico</h6>
+                                                                  <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                                    <label class="form-check-label" for="flexSwitchCheckDefault">Activar</label>
+                                                                    
+                                                                  </div>
+                                                                  
+                                                            </div> <br>
+                                                            <button type="button" class="btn btn-outline-primary" (click)="subscriptioncancel()">Cancelar subscripción</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

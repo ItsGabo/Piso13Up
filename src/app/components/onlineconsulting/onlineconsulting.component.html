@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+        <div class="container w-75 bg mt-5 rounded shadow">
+            <div class="row align-items-stretch">
+                <div class=""></div>
+                <div class="p-5 rounded-end">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="row" id="map_section">
+                                <div class="col-20">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2>Agenda una asesoría en linea</h2>
+                                                <br>
+                                                <p>Dejanos tu telefono, tu nombre y en breve uno de nuestros especialistas se pondra en contacto contigo</p>
+                                                <div class="container">
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <input formControlName="name" type="text" class="form-control" name="text" placeholder="Nombre"> 
+                                                        <br>
+                                                        <div *ngIf="myForm.get('name').errors && myForm.get('name').dirty || myForm.get('name').touched">
+                                                            <p class="text-danger" *ngIf="myForm.get('name').hasError('required')">
+                                                                Este campo es obligatorio
+                                                            </p>
+                                                        </div>
+                                                        <input formControlName="phone" type="text" class="form-control" name="text" placeholder="Telefono"> 
+                                                        <br>
+                                                        <div *ngIf="myForm.get('phone').errors && myForm.get('phone').dirty || myForm.get('phone').touched">
+                                                            <p class="text-danger" *ngIf="myForm.get('phone').hasError('required')">
+                                                                Este campo es obligatorio
+                                                            </p>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col">
+                                                       
+                                                    </div>
+                                                    
+                                            </div>
+                                            <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Enviar</button>
+                                            <p>Recuerda que los cambios pueden tardar hasta 24 horas en verse reflejados</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<app-footer></app-footer>

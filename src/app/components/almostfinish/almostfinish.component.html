@@ -1,0 +1,107 @@
+<img src="assets/img/piso13.png" width="125" alt="">
+    
+    <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+    <div class="container w-75 bg mt-5 rounded shadow"> 
+        <div class="row align-items-stretch">
+            <div class=""></div>
+            <div class="p-5 rounded-end">
+                <div class="row"> 
+                    <div class="container-fluid">
+                        <div class="row" id="map_section">
+                            <div class="col-20">
+                                
+                                <div class="container">
+                                    <div class="row">
+                                        <h3>Ya casi terminamos</h3>
+                                        <h6>Selecciona los mails que quieres tener con tu dominio</h6>
+                                      <div class="col"> <br>
+                                        
+                                        <div class="container">
+                                            <div class="row">
+                                              <div class="col">
+                                                <div class="input-group input-group-sm mb-3">
+                                                    
+                                                    <input formControlName="mail1" type="text" class="form-control" placeholder="Mail" aria-label="First name">
+                                                    <div *ngIf="myForm.get('mail1').errors && myForm.get('mail1').dirty || myForm.get('mail1').touched">
+                                                      <p class="text-danger" *ngIf="myForm.get('mail1').hasError('required')">
+                                                          Este campo es obligatorio
+                                                      </p>
+                                                  </div>
+
+                                                  </div>
+                                                  <div class="input-group input-group-sm mb-3">
+                                                    
+                                                    <input formControlName="password" type="text" class="form-control" placeholder="Contraseña" aria-label="First name">
+                                                    <div *ngIf="myForm.get('password').errors && myForm.get('password').dirty || myForm.get('password').touched">
+                                                      <p class="text-danger" *ngIf="myForm.get('password').hasError('required')">
+                                                          Este campo es obligatorio
+                                                      </p>
+                                                  </div>
+
+                                                  </div>
+                                                  <div class="input-group input-group-sm mb-3">
+                                                    
+                                                    <input formControlName="verifyPassword" type="text" class="form-control" placeholder="Confirmar contraseña" aria-label="First name">
+                                                    <div *ngIf="myForm.get('verifyPassword').errors && myForm.get('verifyPassword').dirty || myForm.get('verifyPassword').touched">
+                                                      <p class="text-danger" *ngIf="myForm.get('verifyPassword').hasError('required')">
+                                                          Este campo es obligatorio
+                                                      </p>
+                                                  </div>
+
+                                                  </div>
+                                              </div>
+                                              <div class="col">
+                                                <div class="input-group input-group-sm mb-3">
+                                                    
+                                                    <input formControlName="mail2" type="text" class="form-control" placeholder="Mail" aria-label="First name">
+                                                    <div *ngIf="myForm.get('mail2').errors && myForm.get('mail2').dirty || myForm.get('mail2').touched">
+                                                      <p class="text-danger" *ngIf="myForm.get('mail2').hasError('required')">
+                                                          Este campo es obligatorio
+                                                      </p>
+                                                  </div>
+
+                                                  </div>
+                                                  <div class="input-group input-group-sm mb-3">
+                                                    
+                                                    <input formControlName="password2" type="text" class="form-control" placeholder="Contraseña" aria-label="First name">
+                                                    <div *ngIf="myForm.get('password2').errors && myForm.get('password2').dirty || myForm.get('password2').touched">
+                                                      <p class="text-danger" *ngIf="myForm.get('password2').hasError('required')">
+                                                          Este campo es obligatorio
+                                                      </p>
+                                                  </div>
+
+                                                  </div>
+                                                  <div class="input-group input-group-sm mb-3">
+                                                    
+                                                    <input formControlName="verifyPassword2" type="text" class="form-control" placeholder="Confirmar contraseña" aria-label="First name">
+                                                    <div *ngIf="myForm.get('verifyPassword2').errors && myForm.get('verifyPassword2').dirty || myForm.get('verifyPassword2').touched">
+                                                      <p class="text-danger" *ngIf="myForm.get('verifyPassword2').hasError('required')">
+                                                          Este campo es obligatorio
+                                                      </p>
+                                                  </div>
+
+                                                  </div>
+                                              </div>
+                                              <div class="container"> <br>
+                                                <div class="row">
+                                                  <div class="col">
+                                                    <button type="button" class="btn btn-outline-primary" routerLink="/">Guardar y continuar despues</button>
+                                                  </div>
+                                                  <div class="col">
+                                                    <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid" (click)="importantinformation()">Continuar</button>
+                                                </div>
+                                            </div>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+                </div>
+            </div>
+        </div>    
+            </div>
+        </div>
+    </div>
+    </form>

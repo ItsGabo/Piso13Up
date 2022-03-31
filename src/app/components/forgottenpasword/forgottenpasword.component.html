@@ -1,0 +1,48 @@
+<img src="assets/img/piso13.png" width="125" alt="">
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+        <div class="container w-75 bg mt-5 rounded shadow">
+            <div class="row align-items-stretch">
+                <div class=""></div>
+                <div class="p-5 rounded-end">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="row" id="map_section">
+                                <div class="col-20">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h2>¿Olvidaste tu contraseña?</h2>
+                                                <p>Porfavor ingresa tu correo electronico. Enviaremos un correo con las intrucciones para restablecer tu contraseña</p>
+                                                <div class="container">
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <label for="text" class="form-label">Correo Electronico</label>
+                                                        <input formControlName="email" type="email" class="form-control" name="text"> 
+                                                        <div *ngIf="myForm.get('email').errors && myForm.get('email').dirty || myForm.get('email').touched">
+                                                            <p class="text-danger" *ngIf="myForm.get('email').hasError('required')">
+                                                                Este campo es obligatorio
+                                                            </p>
+                                                        </div>
+                                                        
+                                                        
+                                                      </div>
+                                                      <div class="col">
+                                                        
+                                                      </div>
+                                            </div>
+                                            <br>
+                                            <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid"  (click)="newpassword()">Continuar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+        </div>
+</form>
+<app-footer></app-footer>

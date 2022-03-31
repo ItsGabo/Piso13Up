@@ -1,0 +1,179 @@
+<img src="assets/img/piso13.png" width="125" alt="">
+<div class="container"> 
+    <br>
+    <h1>Añade la siguiente informacion para tu sitio web</h1> 
+    <p>Compartenos la informacion adecuada para tu sitio</p>
+    <p>Nosotros nos encargamos del resto</p>
+</div>
+<form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+    <div class="container w-75 bg mt-5 rounded shadow"> 
+        <div class="row align-items-stretch">
+            <div class=""></div>
+            <div class="p-5 rounded-end">
+                <div class="row"> 
+                    <div class="container-fluid">
+                        <div class="row" id="map_section">
+                            <div class="col-20">
+                                <div class="container">
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6>Danos una breve descripcion para tu empresa</h6>
+                                                <div class="mb-3">
+                                                    <textarea formControlName="shortDescription" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <div *ngIf="myForm.get('shortDescription').errors && myForm.get('shortDescription').dirty || myForm.get('shortDescription').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('shortDescription').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6>¿Que es lo que hace a tu empresa diferente y/o mejor que la competencia?</h6>
+                                                <div class="mb-3">
+                                                    <textarea formControlName="differentCompany" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <div *ngIf="myForm.get('differentCompany').errors && myForm.get('differentCompany').dirty || myForm.get('differentCompany').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('differentCompany').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6>Enlista las opciones a desarrollar. De la mas importante a la menos importante, enfocate en temas y subtemas.</h6>
+                                                <h6>Esto nos ayudara a organizar la informacion (mapa del sitio)</h6>
+                                                <div class="mb-3">
+                                                    <textarea formControlName="organizeHelper" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <div *ngIf="myForm.get('organizeHelper').errors && myForm.get('organizeHelper').dirty || myForm.get('organizeHelper').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('organizeHelper').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6>Enlista los productos o servicios y pon una leve descripcion de cada uno</h6>
+                                                <div class="mb-3">
+                                                    <textarea formControlName="listProducts" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <div *ngIf="myForm.get('listProducts').errors && myForm.get('listProducts').dirty || myForm.get('listProducts').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('listProducts').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6>Existe contenido adicional al sitio para presentar la organizacion?</h6>
+                                                <h6>(PDF's , fotos, videos, diagramas, textos, etc)</h6>
+                                                <div class="mb-3">
+                                                    <input formControlName="chooseFiles" class="form-control" type="file" id="formFileMultiple" multiple>
+                                                    <div *ngIf="myForm.get('chooseFiles').errors && myForm.get('chooseFiles').dirty || myForm.get('chooseFiles').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('chooseFiles').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                    <p>*Solo archivos PDF, PNG, JPG o GIF*</p>
+                                                    <p>*Maximo 550k. nosotros lo comprimimos para la web</p>
+                                                </div>
+                                                <h6>¿Que quieres que haga la audiencia cuando ingrese a tu sitio web?</h6>
+                                                <h6>(Resolver cuestionarios, contacto, leer articulos, ver servicios)</h6>
+                                                <div class="mb-3">
+                                                    <textarea formControlName="solveSurvey" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <div *ngIf="myForm.get('solveSurvey').errors && myForm.get('solveSurvey').dirty || myForm.get('solveSurvey').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('solveSurvey').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6>¿Cuales son los Call to action que quieres resaltar en la pagina de inicio?</h6>
+                                                <h6>(Ejemplo:"Mas de 60 años de experiencia", "Somos los primeros en___")</h6>
+                                                <div class="mb-3">
+                                                    <textarea formControlName="callActions" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <div *ngIf="myForm.get('callActions').errors && myForm.get('callActions').dirty || myForm.get('callActions').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('callActions').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6>Enlista algunas cosas que consideres que puedan ayudar para el diseño del sitio</h6>
+                                                <div class="mb-3">
+                                                    <textarea formControlName="helfulThings" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    <div *ngIf="myForm.get('helfulThings').errors && myForm.get('helfulThings').dirty || myForm.get('helfulThings').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('helfulThings').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h6>Quiero blog en el sitio</h6> 
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                      Si
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                      No
+                                                    </label>
+                                                  </div>
+                                                  <div class="mb-3">
+                                                    <input formControlName="chooseFiles2" class="form-control" type="file" id="formFileMultiple" multiple>
+                                                    <div *ngIf="myForm.get('chooseFiles2').errors && myForm.get('chooseFiles2').dirty || myForm.get('chooseFiles2').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('chooseFiles2').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                    <p>*Solo archivos .doc*</p>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input formControlName="chooseFiles3" class="form-control" type="file" id="formFileMultiple" multiple>
+                                                    <div *ngIf="myForm.get('chooseFiles3').errors && myForm.get('chooseFiles3').dirty || myForm.get('chooseFiles3').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('chooseFiles3').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                    <p>*Solo archivos PDF, PNG, JPG o GIF*</p>
+                                                    <p>*Maximo 550k. nosotros lo comprimimos para la web</p>
+                                                </div>
+                                                <h6>Si necesitas alguna pagina adicional o algo muy especifico, compartenos la información</h6>
+                                                <div class="mb-3">
+                                                    <input formControlName="pageName" type="text" placeholder="Nombre de la pagina" class="form-control" name="text">
+                                                    <div *ngIf="myForm.get('pageName').errors && myForm.get('pageName').dirty || myForm.get('pageName').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('pageName').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <textarea formControlName="pageText" class="form-control" id="exampleFormControlTextarea1" placeholder="Texto de la pagina" rows="2"></textarea>
+                                                    <div *ngIf="myForm.get('pageText').errors && myForm.get('pageText').dirty || myForm.get('pageText').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('pageText').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input formControlName="chooseFiles4" class="form-control" type="file" id="formFileMultiple" multiple>
+                                                    <div *ngIf="myForm.get('chooseFiles4').errors && myForm.get('chooseFiles4').dirty || myForm.get('chooseFiles4').touched">
+                                                        <p class="text-danger" *ngIf="myForm.get('chooseFiles4').hasError('required')">
+                                                            Este campo es obligatorio
+                                                        </p>
+                                                    </div>
+                                                    <p>*Solo archivos PDF, PNG, JPG o GIF*</p>
+                                                    <p>*Maximo 550k. nosotros lo comprimimos para la web</p>
+                                                    
+                                                </div>
+                                                <div class="container">
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <button type="button" class="btn btn-outline-primary" routerLink="/">Guardar y continuar despues</button>
+                                                      </div>
+                                                      <div class="col">
+                                                        <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid" (click)="companycontact()">Continuar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

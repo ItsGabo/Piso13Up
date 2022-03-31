@@ -1,0 +1,174 @@
+<img src="assets/img/piso13.png" width="125" alt=""> 
+    <div class="container"> 
+        <br>
+        <h1>Informacion de contacto de tu empresa para la seccion de contacto</h1> 
+        <br>
+    </div>
+    <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+        <div class="container w-75 bg mt-5 rounded shadow"> 
+            <div class="row align-items-stretch">
+                <div class=""></div>
+                <div class="p-5 rounded-end">
+                    <div class="row"> 
+                        <div class="container-fluid">
+                            <div class="row" id="map_section">
+                                <div class="col-20">
+                                    <div class="container">
+                                        <div class="row">
+                                          <div class="col">
+                                            <div class="row">
+                                                <div class="container">
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <label for="text" class="form-label">WhatsApp</label>
+                                                        <input formControlName="whatsapp" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('whatsapp').errors && myForm.get('whatsapp').dirty || myForm.get('whatsapp').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('whatsapp').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+                                                      </div>
+                                                      <div class="col">
+                                                        <label for="text" class="form-label">Telefono 1</label>
+                                                        <input formControlName="phone1" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('phone1').errors && myForm.get('phone1').dirty || myForm.get('phone1').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('phone1').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+                                                      </div>
+                                                      <div class="col">
+                                                        <label for="text" class="form-label">Telefono 2</label>
+                                                        <input formControlName="phone2" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('phone2').errors && myForm.get('phone2').dirty || myForm.get('phone2').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('phone2').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col"> <br>
+                                                    <h6>Mail de contacto</h6>
+                                                    <p>Puede ser de los que vamos a hacer o alguno que ya tengas de gmail o hotmail. Ese correo nadie lo va a ver</p>
+                                                    <input formControlName="contactMail" type="text" class="form-control" name="text">
+                                                    <div *ngIf="myForm.get('contactMail').errors && myForm.get('contactMail').dirty || myForm.get('contactMail').touched">
+                                                      <p class="text-danger" *ngIf="myForm.get('contactMail').hasError('required')">
+                                                          Este campo es obligatorio
+                                                      </p>
+                                                  </div>
+                                                  </div>
+                                                  <div class="col"> <br>
+                                                    <h6>Mail al que vamos a mandar informacion del formulario del contacto</h6>
+                                                    <p>Ese correo nadie lo va a ver. Alli recibiras informacion del sitio web</p>
+                                                    <p>Puede ser de lo que vamos a hacer o alguno que ya tengas de gmail o hotmail</p>
+                                                    <input formControlName="informationSendMail" type="text" class="form-control" name="text">
+                                                    <div *ngIf="myForm.get('informationSendMail').errors && myForm.get('informationSendMail').dirty || myForm.get('informationSendMail').touched">
+                                                      <p class="text-danger" *ngIf="myForm.get('informationSendMail').hasError('required')">
+                                                          Este campo es obligatorio
+                                                      </p>
+                                                  </div>
+                                                </div> <br>
+                                                <h6>Dirección</h6>
+                                                <div class="container">
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <label for="text" class="form-label">Codigo postal</label>
+                                                        <input formControlName="postalCode" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('postalCode').errors && myForm.get('postalCode').dirty || myForm.get('postalCode').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('postalCode').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+                                                        
+                                                        <label for="text" class="form-label">Estado</label>
+                                                        <input formControlName="state" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('state').errors && myForm.get('state').dirty || myForm.get('state').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('state').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+
+                                                        <label for="text" class="form-label">Colonia</label>
+                                                        <input formControlName="neighbourhood" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('neighbourhood').errors && myForm.get('neighbourhood').dirty || myForm.get('neighbourhood').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('neighbourhood').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+
+                                                        <label for="text" class="form-label">No.Exterior</label>
+                                                        <input formControlName="exteriorNumber" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('exteriorNumber').errors && myForm.get('exteriorNumber').dirty || myForm.get('exteriorNumber').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('exteriorNumber').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+                                                      </div>
+                                                      <div class="col">
+                                                        <label for="text" class="form-label">Ciudad</label>
+                                                        <input formControlName="city" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('city').errors && myForm.get('city').dirty || myForm.get('city').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('city').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+
+                                                        <label for="text" class="form-label">Alcaldia</label>
+                                                        <input formControlName="municipality" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('municipality').errors && myForm.get('municipality').dirty || myForm.get('municipality').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('municipality').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+
+                                                        <label for="text" class="form-label">Calle</label>
+                                                        <input formControlName="street" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('street').errors && myForm.get('street').dirty || myForm.get('street').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('street').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+
+                                                        <label for="text" class="form-label">No.Interior</label> 
+                                                        <input formControlName="interiorNumber" type="text" class="form-control" name="text">
+                                                        <div *ngIf="myForm.get('interiorNumber').errors && myForm.get('interiorNumber').dirty || myForm.get('interiorNumber').touched">
+                                                          <p class="text-danger" *ngIf="myForm.get('interiorNumber').hasError('required')">
+                                                              Este campo es obligatorio
+                                                          </p>
+                                                      </div>
+                                                      </div> 
+                                                 </div> <br>
+                                                 <h6>Quiero mapa de mi empresa en el sitio</h6> 
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                      Si
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                      No
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <div class="container"> <br>
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <button type="button" class="btn btn-outline-primary" routerLink="/">Guardar y continuar despues</button>
+                                                      </div>
+                                                      <div class="col">
+                                                        <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid" (click)="socialnetwork()">Continuar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

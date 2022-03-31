@@ -1,0 +1,134 @@
+<img src="assets/img/piso13.png" width="125" alt=""> 
+    <div class="container"> 
+        <br>
+        <h1>Redes sociales</h1> 
+        <br>
+        <h6>Selecciona las redes sociales que maneja tu empresa</h6>
+    </div>
+<form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
+    <div class="container w-75 bg mt-5 rounded shadow"> 
+        <div class="row align-items-stretch">
+            <div class=""></div>
+            <div class="p-5 rounded-end">
+                <div class="row"> 
+                    <div class="container-fluid">
+                        <div class="row" id="map_section">
+                            <div class="col-20">
+                                <div class="container">
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="container">
+                                                    <div class="row">
+                                                      <div class="col">
+                                                        <div class="form-check"> 
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                              Facebook
+                                                              <input formControlName="facebook" type="text" placeholder="link o URL">
+                                                              <div *ngIf="myForm.get('facebook').errors && myForm.get('facebook').dirty || myForm.get('facebook').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('facebook').hasError('required')">
+                                                                    Este campo es obligatorio
+                                                                </p>
+                                                            </div>
+                                                            </label>
+                                                          </div>
+                                                          <div class="form-check"> <br>
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                              Instagram 
+                                                              <input formControlName="instagram" type="text" placeholder="link o URL">
+                                                              <div *ngIf="myForm.get('instagram').errors && myForm.get('instagram').dirty || myForm.get('instagram').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('instagram').hasError('required')">
+                                                                    Este campo es obligatorio
+                                                                </p>
+                                                            </div>
+                                                            </label>
+                                                          </div>
+                                                          <div class="form-check"> <br>
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault"> 
+                                                              Twitter
+                                                              <input formControlName="twitter" type="text" placeholder="link o URL">
+                                                              <div *ngIf="myForm.get('twitter').errors && myForm.get('twitter').dirty || myForm.get('twitter').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('twitter').hasError('required')">
+                                                                    Este campo es obligatorio
+                                                                </p>
+                                                            </div>
+                                                            </label>
+                                                          </div>
+                                                          <div class="form-check"> <br>
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                              Youtube
+                                                              <input formControlName="youtube" type="text" placeholder="link o URL">
+                                                              <div *ngIf="myForm.get('youtube').errors && myForm.get('youtube').dirty || myForm.get('youtube').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('youtube').hasError('required')">
+                                                                    Este campo es obligatorio
+                                                                </p>
+                                                            </div>
+                                                            </label>
+                                                          </div>
+                                                          <div class="form-check"> <br>
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                              Linkedin
+                                                              <input formControlName="linkendin" type="text" placeholder="link o URL">
+                                                              <div *ngIf="myForm.get('linkendin').errors && myForm.get('linkendin').dirty || myForm.get('linkendin').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('linkendin').hasError('required')">
+                                                                    Este campo es obligatorio
+                                                                </p>
+                                                            </div>
+                                                            </label>
+                                                          </div>
+                                                          <div class="form-check"> <br>
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                              Tiktok
+                                                              <input formControlName="tiktok" type="text" placeholder="link o URL">
+                                                              <div *ngIf="myForm.get('tiktok').errors && myForm.get('tiktok').dirty || myForm.get('tiktok').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('tiktok').hasError('required')">
+                                                                    Este campo es obligatorio
+                                                                </p>
+                                                            </div>
+                                                            </label>
+                                                          </div>
+                                                          <div class="form-check"> <br>
+                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                            <label class="form-check-label" for="flexCheckDefault">
+                                                              Otra
+                                                              <input formControlName="another" type="text" placeholder="link o URL">
+                                                              <div *ngIf="myForm.get('another').errors && myForm.get('another').dirty || myForm.get('another').touched">
+                                                                <p class="text-danger" *ngIf="myForm.get('another').hasError('required')">
+                                                                    Este campo es obligatorio
+                                                                </p>
+                                                            </div>
+                                                            </label>
+                                                          </div>
+                                                          <div class="container"> <br>
+                                                            <div class="row">
+                                                              <div class="col">
+                                                                <button type="button" class="btn btn-outline-primary" routerLink="/">Guardar y continuar despues</button>
+                                                              </div>
+                                                              <div class="col">
+                                                                <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid" (click)="almostfinish()">Continuar</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

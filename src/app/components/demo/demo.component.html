@@ -1,0 +1,22 @@
+<img src="assets/img/piso13.png" width="125" alt="">
+<div class="container"> 
+    <br>
+    <h1>Escoge el diseño que mas se acomode a tus necesidades</h1> 
+    <br>
+    <h4>Selecciona el tema de tu interes</h4>
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-3" *ngFor="let image of _albums; let i = index">
+            <img [src]="image.thumb" (click)="open(i)" />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-outline-primary" routerLink="/">Guardar y continuar despues</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-outline-primary" (click)="correctinformation()">Continuar</button>
+            </div>
+      </div>
+      </div>
